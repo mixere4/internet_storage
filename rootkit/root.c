@@ -26,7 +26,7 @@ static int     root_open  (struct inode *inode, struct file *f);
 static ssize_t root_read  (struct file *f, char *buf, size_t len, loff_t *off);
 static ssize_t root_write (struct file *f, const char __user *buf, size_t len, loff_t *off);
 
-MODULE_LICENSE("Free"); 
+MODULE_LICENSE("GPL"); 
 MODULE_AUTHOR("darknessinyourmind");
 MODULE_DESCRIPTION("g0t r0ot!"); 
 MODULE_VERSION("1.0"); 
